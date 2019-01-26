@@ -6,32 +6,37 @@
         BookService.$inject = [];  
     
         function BookService() {
-            var books = [{
-                Title: "100 años de Soledad",
-                Edition: "20/08/2001",
-                authors: ['Gabriel García Márquez']
-            }, {
-                Title: "La divina comedia",
-                Edition: "20/08/1980",
-                authors: ['Dante Alighieri']
-            }, {
-                Title: "Don Quijote de la mancha",
-                Edition: "20/08/1970",
-                authors: ['Miguel de Cervantes']
+            var authorList = [{
+                id: 0,
+                name: 'Gabriel García Márquez'
+            },{
+                id: 1,
+                name: 'Miguel de Cervantes'
+            },{
+                id: 2,
+                name: 'Gabriel García Márquez'
             }];
-            var authors = ['Gabriel García Márquez', 'Dante Alighieri', 'Roberto Bolaño', 'Miguel de Cervantes'];
-            
-            var getBooks = () => {
-                return books;
-            }
-            
-            var getAuthors = () => {
-                return authors
-            }
+
+            var books = [{
+                id: 0,
+                title: "100 años de Soledad",
+                edition: "20/08/2001",
+                authors: authorList
+            }, {
+                id: 1,
+                title: "La divina comedia",
+                edition: "20/08/1980",
+                authors: authorList
+            }, {
+                id: 2,
+                title: "Don Quijote de la mancha",
+                edition: "20/08/1970",
+                authors: authorList
+            }];
             
             return {
-                getBooks: getBooks,
-                getAuthors: getAuthors
+                getBooks: books,
+                getAuthors: authorList
             }
         }
 })();

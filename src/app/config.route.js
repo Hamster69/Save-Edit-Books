@@ -13,7 +13,11 @@
 	    
 		$stateProvider
 		.state('book-list', {
-			url: '/bookList'
+			url: '/bookList',
+			templateUrl: 'Views/book-list.template.html',
+			title: 'Book List',
+			controller: "BookListController",
+			controllerAs: 'vm'
 		});
 	}
 })();

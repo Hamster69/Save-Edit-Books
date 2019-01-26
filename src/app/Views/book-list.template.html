@@ -1,0 +1,40 @@
+<md-content layout-padding ng-cloak>
+    <h2>Lista de Libros</h2>
+    <div layout="row">
+        <div flex>
+            <md-input-container>
+                <label>Título</label>
+                <input ng-model="vm.currentAuthor">
+            </md-input-container>
+        </div>
+        <div flex>
+            <md-input-container>
+                <label>Autores</label>
+                <input ng-model="vm.book.title">
+            </md-input-container>
+        </div>
+        
+    </div>
+    <div layout="row">
+        <div flex-gt-xs>
+            <md-datepicker ng-model="vm.book.edition" md-placeholder="Edición"></md-datepicker>
+        </div>
+        <div flex>
+        </div>
+        
+    </div>
+    <div layout="row">
+        <table>
+            <tr>
+                <th>Título</th>
+                <th>Edicion</th>
+                <th>Autores</th>
+            </tr>
+            <tr ng-repeat="book in vm.bookList()">
+                <td>{{book.title}}</td>
+                <td>{{book.edition}}</td>
+                <td>{{book.authors.length}}</td>
+            </tr>
+      </table>
+    </div>
+</md-content>
