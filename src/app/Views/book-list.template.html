@@ -13,14 +13,13 @@
                 <input ng-model="vm.book.title">
             </md-input-container>
         </div>
-        
-    </div>
-    <div layout="row">
         <div flex-gt-xs>
             <md-datepicker ng-model="vm.book.edition" md-placeholder="Edición"></md-datepicker>
         </div>
-        <div flex>
-        </div>
+        
+    </div>
+    <div layout="row">
+        
         
     </div>
     <div layout="row">
@@ -37,4 +36,8 @@
             </tr>
       </table>
     </div>
+    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+        <md-button class="md-raised md-primary" ng-click="vm.showPrompt($event)">Guardar nuevo libro</md-button>
+        <md-button class="md-raised md-primary" ng-click="vm.showPrompt($event)">Editar seleccionado</md-button>
+    </section>
 </md-content>
