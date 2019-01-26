@@ -1,0 +1,10 @@
+{
+  "name": "Save-Edit-Books",
+  "version": "0.0.1",
+  "license": "Apache 2.0",
+  "dependencies": {
+    "angular": "~1.7.5",
+    "angular-material": "^1.1.10",
+    "angular-ui-router": "^1.0.20"
+  }
+}
